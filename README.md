@@ -1,6 +1,6 @@
 # smart_parking_app
 
-A new Flutter project.
+A smart app for parking payment by Anlyzer
 
 ## Getting Started
 
