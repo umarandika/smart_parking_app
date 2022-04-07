@@ -19,14 +19,14 @@ class _HomeState extends State<Home> {
           Align(
             alignment: Alignment.topLeft,
             child: Container(
-              margin: const EdgeInsets.fromLTRB(15, 35, 0, 0),
+              margin: const EdgeInsets.fromLTRB(15, 40, 0, 0),
               child: IconButton(
-                onPressed: () {},
+                onPressed: () => print("Hello Workd"),
                 icon: const Icon(
                   Icons.settings_outlined,
                   color: Color.fromARGB(255, 35, 151, 243),
                 ),
-                iconSize: 46,
+                iconSize: 40,
               ),
             ),
           ),
@@ -60,7 +60,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           const SizedBox(
-            height: 70,
+            height: 80,
           ),
           Container(
             // color: Colors.black,
@@ -77,7 +77,7 @@ class _HomeState extends State<Home> {
               ],
             ),
             child: Padding(
-              padding: const EdgeInsets.all(11.0),
+              padding: const EdgeInsets.all(7.0),
               child: IconButton(
                 onPressed: () {},
                 icon: const Icon(
