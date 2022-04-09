@@ -14,15 +14,14 @@ class Splash extends StatelessWidget {
         style: TextStyle(
           fontSize: 35,
           color: Colors.white,
-          fontFamily: 'OpenSans',
+          fontFamily: 'Open Sans',
           fontWeight: FontWeight.bold,
         ),
       ),
       nextScreen: nextScreen,
       backgroundColor: const Color.fromARGB(255, 35, 151, 243),
       splashTransition: SplashTransition.fadeTransition,
-      animationDuration: const Duration(milliseconds: 700),
-      duration: 1800,
+      duration: 1500,
     );
   }
 }
