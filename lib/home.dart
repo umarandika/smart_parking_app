@@ -1,33 +1,26 @@
 // ignore_for_file: avoid_print
-
 import 'package:flutter/material.dart';
+import './scan.dart';
 
-class Home extends StatefulWidget {
+class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 227, 242, 253),
       body: Column(
         children: [
-          Align(
+          Container(
             alignment: Alignment.topLeft,
-            child: Container(
-              margin: const EdgeInsets.fromLTRB(15, 40, 0, 0),
-              child: IconButton(
-                onPressed: () => print("Hello Workd"),
-                icon: const Icon(
-                  Icons.settings_outlined,
-                  color: Color.fromARGB(255, 35, 151, 243),
-                ),
-                iconSize: 40,
+            margin: const EdgeInsets.fromLTRB(15, 45, 0, 0),
+            child: IconButton(
+              onPressed: () => {},
+              icon: const Icon(
+                Icons.settings_outlined,
+                color: Color.fromARGB(255, 35, 151, 243),
               ),
+              iconSize: 43,
             ),
           ),
           const SizedBox(
@@ -79,7 +72,11 @@ class _HomeState extends State<Home> {
             child: Padding(
               padding: const EdgeInsets.all(7.0),
               child: IconButton(
-                onPressed: () {},
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const Scanner(),
+                  ),
+                ),
                 icon: const Icon(
                   Icons.camera_alt,
                   color: Colors.white,
