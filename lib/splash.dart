@@ -8,11 +8,13 @@ class Splash extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final curScaleFactor = MediaQuery.of(context).textScaleFactor;
+
     return AnimatedSplashScreen(
-      splash: const Text(
+      splash: Text(
         "Anlyzer",
         style: TextStyle(
-          fontSize: 35,
+          fontSize: (35 * curScaleFactor),
           color: Colors.white,
           fontFamily: 'Open Sans',
           fontWeight: FontWeight.bold,
