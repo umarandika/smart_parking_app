@@ -7,6 +7,8 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final curScaleFactor = MediaQuery.of(context).textScaleFactor;
+
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 227, 242, 253),
       body: Column(
@@ -26,12 +28,12 @@ class Home extends StatelessWidget {
           const SizedBox(
             height: 38,
           ),
-          const Text(
+          Text(
             "Tekan tombol kamera\nuntuk memindai kode QR",
             style: TextStyle(
-              fontFamily: 'Open Sans',
+              fontFamily: 'OpenSans',
               fontWeight: FontWeight.bold,
-              fontSize: 30,
+              fontSize: (27 * curScaleFactor),
             ),
             textAlign: TextAlign.center,
           ),
