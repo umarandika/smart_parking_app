@@ -44,6 +44,7 @@ class _ScannerState extends State<Scanner> {
   }
 
   Widget _buildQrView(BuildContext context) {
+    final curScaleFactor = MediaQuery.of(context).textScaleFactor;
     // For this example we check how width or tall the device is and change the scanArea and overlay accordingly.
     var scanArea = (MediaQuery.of(context).size.width * 0.75);
     // To ensure the Scanner view is properly sizes after rotation
@@ -78,10 +79,10 @@ class _ScannerState extends State<Scanner> {
                 padding: MaterialStateProperty.all(
                     const EdgeInsets.fromLTRB(25, 13, 25, 13)),
               ),
-              child: const Text(
+              child: Text(
                 "Scan with image",
                 style: TextStyle(
-                    fontSize: 18,
+                    fontSize: (18 * curScaleFactor),
                     fontFamily: 'OpenSans',
                     fontWeight: FontWeight.w600),
               ),
